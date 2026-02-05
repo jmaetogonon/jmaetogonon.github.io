@@ -1,0 +1,394 @@
+﻿/* Projects Section */
+.projects-section {
+    background: var(--background);
+    padding: 5rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    height: fit-content; /* Ensure card height fits content */
+}
+
+    .project-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
+
+.project-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-placeholder {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.view-project-btn {
+    background: white;
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .view-project-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px); /* Calculate remaining height after image */
+}
+
+    .project-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        transition: color 0.3s ease;
+        line-height: 1.3;
+    }
+
+.project-card:hover .project-content h3 {
+    color: var(--primary-color);
+}
+
+.project-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 4.8em; /* Approximately 3 lines of text */
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto; /* Push tech stack to bottom */
+}
+
+    .project-tech span {
+        background: var(--background-alt);
+        color: var(--primary-color);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+        .project-tech span:hover {
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+/* Project Modal - Keep full description in modal */
+.modal-info p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    /* No line clamp in modal - show full description */
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+}
+
+/* Rest of your existing CSS remains the same */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+    .modal-close:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: scale(1.1);
+    }
+
+/* Modal Carousel */
+.modal-carousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+    .modal-carousel .carousel-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gradient);
+    }
+
+.carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-carousel .carousel-prev,
+.modal-carousel .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.modal-carousel .carousel-prev {
+    left: 1rem;
+}
+
+.modal-carousel .carousel-next {
+    right: 1rem;
+}
+
+    .modal-carousel .carousel-prev:hover,
+    .modal-carousel .carousel-next:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+.modal-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+    .modal-carousel .carousel-indicators .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .modal-carousel .carousel-indicators .indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+/* Modal Info */
+.modal-info {
+    padding: 2rem;
+}
+
+    .modal-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .modal-info p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Scroll animations */
+.project-card.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .project-card.animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+/* Projects Section Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    .project-content {
+        padding: 1.25rem;
+        height: calc(100% - 150px); /* Adjust for smaller image */
+    }
+
+        .project-content p {
+            -webkit-line-clamp: 2; /* Show only 2 lines on mobile */
+            min-height: 3.2em; /* Approximately 2 lines of text */
+        }
+
+    .project-modal {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+    }
+
+    .modal-carousel {
+        height: 250px;
+    }
+
+        .modal-carousel .carousel-prev,
+        .modal-carousel .carousel-next {
+            width: 40px;
+            height: 40px;
+        }
+
+    .modal-info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-carousel {
+        height: 200px;
+    }
+
+        .modal-carousel .carousel-prev,
+        .modal-carousel .carousel-next {
+            width: 35px;
+            height: 35px;
+        }
+
+    .project-content p {
+        -webkit-line-clamp: 2; /* Keep 2 lines on very small screens */
+        min-height: 3.2em;
+    }
+}

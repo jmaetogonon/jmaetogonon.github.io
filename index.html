@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JM__Port</title>
+    <base href="/" />
+    <!--<base href="/" />-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/hero.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
+    <link href="css/skills.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
+    <link href="css/contact.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/me.png" />
+    <link href="JM__Port.styles.css" rel="stylesheet" />
+
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: gap: https://ssl.gstatic.com 'unsafe-eval' ws: wss:;
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                   font-src 'self' https://fonts.gstatic.com data:;
+                   script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:;">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Custom Loading Screen -->
+        <div class="custom-loading-screen">
+            <div class="loading-container">
+                <!-- Coffee-themed loader -->
+                <div class="coffee-loader">
+                    <div class="coffee-cup">
+                        <div class="coffee-liquid"></div>
+                    </div>
+                    <div class="coffee-steam">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <!-- Loading text with typing animation -->
+                <div class="loading-content">
+                    <h3 class="loading-title">Brewing some code</h3>
+                    <div class="loading-subtitle">
+                        <span class="typing-text">Jochelle's Portfolio</span>
+                    </div>
+                    <div class="loading-progress-container">
+                        <div class="loading-progress-bar">
+                            <div class="loading-progress-fill"></div>
+                        </div>
+                        <div class="loading-tech-stack">
+                            <span class="tech-dot" style="animation-delay: 0s">C#</span>
+                            <span class="tech-dot" style="animation-delay: 0.2s">.NET</span>
+                            <span class="tech-dot" style="animation-delay: 0.4s">Blazor</span>
+                            <span class="tech-dot" style="animation-delay: 0.6s">MAUI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="js/animations.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/skills.js"></script>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>
