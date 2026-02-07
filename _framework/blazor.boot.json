@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "JM__Port",
   "resources": {
-    "hash": "sha256-/DctU1GgoJpIz3eWcMV44xJAtWvtnprGlP6sRhDjY2s=",
+    "hash": "sha256-zf4h3Q4xn+Q1AdLKHAR8YrrQ9Bj7TtHScqbTb+lzpvQ=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -56,7 +56,7 @@
       "System.Text.RegularExpressions.wasm": "sha256-ocCNWHH3NXDA5L424ZYhEmBpJmEyE4tNHeu4puAj1ek=",
       "System.wasm": "sha256-jXhnUNHzjjL7Plo7WcHuX7V5Dc/Umt+qmGGC+Js76SE=",
       "System.Private.CoreLib.wasm": "sha256-tebiLYO7CNzC0fD9xaDhIV64kxj+B1ek5np2f5bd2Ng=",
-      "JM__Port.wasm": "sha256-UKC/JmThRxmVYdJF69l1iGfsVJjqmyCZYOe4lvND5FI="
+      "JM__Port.wasm": "sha256-7col2BU1dlpO+4Lb57DKUFQuz1FjshoiRJvYSAACY5Y="
     }
   },
   "cacheBootResources": true,
