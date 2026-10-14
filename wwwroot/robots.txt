@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jmaetogonon.github.io/sitemap.xml

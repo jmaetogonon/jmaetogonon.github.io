@@ -1,0 +1,165 @@
+@page "/"
+@inject IJSRuntime JS
+<PageTitle>Jochelle Mae Mabasa — Full Stack Developer</PageTitle>
+<HeadContent>
+    <meta name="description" content="Jochelle Mae Mabasa builds practical web and mobile applications with Blazor, .NET, APIs, and SQL Server." />
+    <meta property="og:title" content="Jochelle Mae Mabasa — Full Stack Developer" />
+    <meta property="og:description" content="Building thoughtful digital systems for the people who use them every day." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jmaetogonon.github.io/" />
+</HeadContent>
+<div class="portfolio">
+    <header class="topbar">
+        <a class="wordmark" href="#top" aria-label="Jochelle Mabasa home"><span class="brand-mark">JM</span><span>Jochelle<span class="wordmark-dot">.</span></span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="@menuOpen" @onclick="ToggleMenu"><span></span><span></span></button>
+        <nav class="nav-links @(menuOpen ? "nav-open" : "")" aria-label="Main navigation">
+            <a href="#work" @onclick="CloseMenu">Work</a><a href="#about" @onclick="CloseMenu">About</a><a href="#journey" @onclick="CloseMenu">Journey</a><a class="nav-contact" href="#contact" @onclick="CloseMenu">Let's talk ↗</a>
+        </nav>
+    </header>
+    <main id="top">
+        <section class="hero section-wrap" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <div class="eyebrow"><i class="status-dot"></i> FULL STACK DEVELOPER <span class="eyebrow-line"></span> DAVAO CITY, PH</div>
+                <h1 id="hero-title">I build systems<br />that <em>move work</em><br />forward.</h1>
+                <p class="hero-intro">I’m Jochelle Mae Mabasa — a developer shaping practical web and mobile tools that make everyday operations clearer, faster, and more connected.</p>
+                <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span>↓</span></a><a class="text-link" href="assets/jochelle-mae-mabasa-cv.pdf" target="_blank" rel="noopener">View my CV ↗</a></div>
+                <div class="hero-meta"><span>Currently building at <strong>Sonic Sales &amp; Distribution</strong></span><span class="meta-separator">/</span><span>Since 2023</span></div>
+            </div>
+            <div class="hero-art reveal" role="img" aria-label="Abstract illustration of connected software systems"><div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core-card"><div class="core-top"><span>SYSTEMS / 001</span><span class="core-live"><i></i> LIVE</span></div><div class="core-symbol">{<b>;</b>}</div><div class="core-name">Thoughtful by design<small>Connected by code.</small></div><div class="core-footer"><span>.NET</span><span>Blazor</span><span>APIs</span></div></div><div class="float-chip chip-api"><b>↔ &nbsp;REST APIs</b><small>connected</small></div><div class="float-chip chip-data"><b>◈ &nbsp;One source</b><small>of truth</small></div><div class="art-index">01 <i>—</i> 04</div><div class="art-caption">MAKE COMPLEXITY<br />FEEL SIMPLE</div></div>
+            <a class="scroll-cue" href="#work"><span></span> SCROLL TO EXPLORE</a>
+        </section>
+        <section id="work" class="section-wrap work-section reveal" aria-labelledby="work-title">
+            <div class="section-heading"><div><p class="eyebrow">SELECTED WORK <span class="heading-number">01 / 04</span></p><h2 id="work-title">Software with a<br /><em>job to do.</em></h2></div><p class="heading-note">Internal platforms. Connected workflows.<br />Tools made for real teams and real days.</p></div>
+            <div class="projects-grid">
+                <ProjectCard Number="01" Type="INTERNAL PLATFORM" Title="People, in one place." Description="Designed and built an HRIS from scratch to bring employee information together and streamline day-to-day HR operations." Visual="hr" Tags=".NET 8,Blazor" OnOpen="OpenProject" />
+                <ProjectCard Number="02" Type="DATA FOUNDATION" Title="Consistency, connected." Description="A centralized master data platform serving as a single source of truth and exposing REST APIs to internal applications." Visual="data" Tags=".NET 8,Blazor,REST APIs" OnOpen="OpenProject" />
+                <ProjectCard Number="03" Type="REAL-TIME WORKFLOW" Title="Requests, in motion." Description="A request monitoring platform built from scratch to centralize business requests and improve workflow transparency." Visual="signal" Tags=".NET 10,Blazor,SignalR,CQRS,Clean Architecture" OnOpen="OpenProject" />
+                <ProjectCard Number="04" Type="MOBILE / INVENTORY" Title="AGRO — farm movement, in view." Description="A .NET MAUI mobile app for poultry inventory, tracking egg and chicken movements." Visual="agro" Tags=".NET MAUI,Mobile,Poultry Inventory" OnOpen="OpenProject" />
+                <ProjectCard Number="05" Type="MOBILE / TRANSACTIONS" Title="SetTra Mobile App" Description="Mobile application for managing invoice settlements and transactions, built with .NET MAUI for cross-platform compatibility. Features offline data synchronization and a modern interface following MVVM patterns." Visual="settra" Tags=".NET MAUI,SQLite,REST API,MVVM,XAML,C#,Community Toolkit" OnOpen="OpenProject" />
+                <ProjectCard Number="06" Type="MOBILE / WAREHOUSE" Title="INVENTOPRO: PicknPack" Description="Warehouse management mobile application designed for order pickers, featuring barcode scanning and optimized picking routes to enhance operational efficiency." Visual="pickpack" Tags=".NET MAUI,ZXing Barcode Scanner,SQLite,REST API,MVVM,XAML,C#,Community Toolkit" OnOpen="OpenProject" />
+                <ProjectCard Number="07" Type="PERSONAL PROJECT / PWA" Title="Gasta, made for mindful spending." Description="A personal expense tracker built with Blazor and published as a static site on GitHub." Visual="gasta" Tags="Blazor,PWA,GitHub Pages" Link="https://gastaapp.github.io/" OnOpen="OpenProject" />
+                <ProjectCard Number="08" Type="UNIVERSITY CAPSTONE" Title="A closer look at work activity." Description="A VB.NET Windows application that monitors user activity, idle time, background apps, and screenshots, storing data for employee tracking and analytics." Visual="capstone" Tags="VB.NET,Windows,Activity Monitoring,Analytics" OnOpen="OpenProject" />
+            </div>
+            <p class="work-footnote"><i class="status-dot"></i> Selected internal platforms support real day-to-day business workflows.</p>
+        </section>
+        <section id="about" class="about-section"><div class="section-wrap about-grid reveal"><div class="about-lead"><p class="eyebrow">A LITTLE ABOUT HOW I WORK <span class="heading-number">02 / 04</span></p><h2>Useful first.<br /><em>Thoughtful always.</em></h2><div class="about-mark" aria-hidden="true">{<b>;</b>}</div></div><div class="about-copy"><p class="about-statement">I like working where software meets the day-to-day: untangling a process, finding the right shape for a tool, then seeing a team use it for real.</p><p>My work spans responsive interfaces, RESTful APIs, data layers, and mobile applications. I care about clarity across the whole system — from the person using the screen to the data moving behind it.</p><p>At Sonic Sales &amp; Distribution, that has meant creating platforms from scratch, connecting internal systems, modernizing existing apps, and bringing solutions to business stakeholders.</p><div class="principles"><div><span>01</span><b>Start with the workflow</b></div><div><span>02</span><b>Connect the whole stack</b></div><div><span>03</span><b>Ship for everyday use</b></div></div></div></div></section>
+        <section class="section-wrap skills-section reveal" aria-labelledby="skills-title">
+            <div class="section-heading"><div><p class="eyebrow">TOOLS OF THE TRADE <span class="heading-number">03 / 04</span></p><h2 id="skills-title">The building<br /><em>blocks.</em></h2></div><p class="heading-note">A practical toolkit for taking ideas<br />from interface to production.</p></div><div class="skills-board">
+            <SkillGroup Number="01" Name="Languages" Items="C# · VB.NET · PHP · HTML5 · CSS · JavaScript" Icon="⌘" /><SkillGroup Number="02" Name="Frameworks & UI" Items=".NET 8 · .NET 10 · Blazor · .NET MAUI · CodeIgniter 4 · Bootstrap 5" Icon="◫" /><SkillGroup Number="03" Name="Data & integration" Items="SQL Server · Entity Framework Core · RESTful APIs · SignalR" Icon="⤳" /><SkillGroup Number="04" Name="Ways of working" Items="Clean Architecture · CQRS · Responsive Design · UI/UX · Progressive Web Apps" Icon="✳" /><SkillGroup Number="05" Name="Tools" Items="Visual Studio · Git · Figma · Postman · Swagger · Claude · ChatGPT" Icon="↗" />
+        </div>
+    </section>
+    <section id="journey" class="journey-section">
+        <div class="section-wrap reveal">
+            <div class="section-heading"><div><p class="eyebrow">THE PATH SO FAR <span class="heading-number">04 / 04</span></p><h2>Built through<br /><em>experience.</em></h2></div><p class="heading-note">From first support tickets to systems<br />that help teams work better.</p></div>
+            <div class="timeline"><TimelineItem Period="SEP 2023 — NOW" Role="Full Stack Developer" Company="SONIC SALES & DISTRIBUTION INC." Description="Build and maintain web and mobile applications across the business. Designed HRIS, master data management, and request monitoring platforms; delivered three mobile apps; upgraded applications from .NET 6 to .NET 8; and presented solutions to stakeholders." Tags=".NET,Blazor,.NET MAUI,SQL Server,APIs" /><TimelineItem Period="AUG 2022 — DEC 2022" Role="Web Developer Intern" Company="SUSTAINABLE MARKETING SOLUTIONS, INC." Description="Developed and maintained company web apps with PHP and CodeIgniter 4, improved responsive interfaces, prototyped UI in Figma, and helped resolve software, hardware, and network issues." Tags="PHP,CodeIgniter 4,Bootstrap,Figma" /><TimelineItem Period="AUG 2022 — DEC 2022" Role="Technical Support Intern" Company="UNIVERSITY OF MINDANAO · ICT OFFICE" Description="Installed and configured computer systems and applications, supported hardware, software, and network systems, and diagnosed technical issues." Tags="IT Support,Networking,Troubleshooting" /></div>
+            <div class="education-card"><div class="edu-icon">UM</div><div class="edu-main"><span class="project-type">EDUCATION / 2018 — 2023</span><h3>Bachelor of Science in Information Technology</h3><p>University of Mindanao</p></div></div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section"><div class="section-wrap contact-inner reveal"><p class="eyebrow">HAVE A GOOD PROBLEM TO SOLVE?</p><h2>Let's make<br /><em>it work better.</em></h2><a class="contact-email" href="mailto:jochellemae16@gmail.com">jochellemae16@gmail.com <span>↗</span></a><div class="contact-bottom"><span>Based in Davao City, Philippines</span><div><a href="tel:+639765177673">+639-765-17-7673</a><a href="mailto:jochellemae16@gmail.com">Email</a><a href="https://www.linkedin.com/in/jochelle-mae-mabasa" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/jmaetogonon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
+</main>
+<footer class="footer"><a class="wordmark" href="#top"><span class="brand-mark">JM</span><span>Jochelle<span class="wordmark-dot">.</span></span></a><span>© @DateTime.Now.Year Jochelle Mae Mabasa</span><a href="assets/jochelle-mae-mabasa-cv.pdf" target="_blank" rel="noopener">Original CV ↗</a><span class="footer-note">DESIGNED TO MAKE SENSE.</span></footer>
+</div>
+<dialog class="project-dialog" @ref="projectDialog" @onclose="DialogClosed" aria-labelledby="detail-title">
+    <div class="dialog-shell">
+        <div class="dialog-top"><span class="eyebrow">PROJECT</span><button class="dialog-close" @onclick="CloseProject" aria-label="Close project details">×</button></div>
+        @if (activeProject is not null)
+        {
+            <div class="dialog-content">
+                <div class="dialog-visual">
+                    @if (CurrentImages.Count > 0)
+                    {
+                        <img src="@CurrentImages[slideIndex].Src" alt="@CurrentImages[slideIndex].Alt" />
+                        @if (CurrentImages.Count > 1)
+                        {
+                            <button class="carousel-arrow previous" @onclick="PreviousSlide" aria-label="Previous project image">←</button>
+                            <button class="carousel-arrow next" @onclick="NextSlide" aria-label="Next project image">→</button>
+                            <div class="carousel-count" aria-live="polite">@(slideIndex + 1) / @CurrentImages.Count</div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="gallery-placeholder"><span class="placeholder-mark">{ ; }</span><b>Project visual</b></div>
+                    }
+                </div>
+                <div class="dialog-copy">
+                    <span class="project-type">@activeProject.Type</span><h2 id="detail-title">@activeProject.Title</h2><p>@activeProject.Description</p>
+                    <div class="tag-row">
+                        @foreach (var tag in activeProject.Tags.Split(','))
+                        {
+                            <span>@tag</span>
+                        }
+                    </div>
+                    @if (activeProject.Link is not null)
+                    {
+                        <a class="button button-dark dialog-live-link" href="@activeProject.Link" target="_blank" rel="noopener noreferrer">Visit live app <span>↗</span></a>
+                    }
+                    @if (CurrentImages.Count > 1)
+                    {
+                        <div class="carousel-dots" aria-label="Choose project image">
+                            @for (var i = 0; i < CurrentImages.Count; i++)
+                            {
+                                var index = i;
+                                <button class="@(slideIndex == index ? "selected" : "")" aria-label="Show image @(index + 1)" aria-current="@(slideIndex == index ? "true" : null)" @onclick="() => ShowSlide(index)"></button>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</dialog>
+@code {
+    private bool menuOpen;
+    private bool openPending;
+    private ProjectCard? activeProject;
+    private int slideIndex;
+    private ElementReference projectDialog;
+    private void ToggleMenu() => menuOpen = !menuOpen;
+    private void CloseMenu() => menuOpen = false;
+    private void OpenProject(ProjectCard project) { activeProject = project; slideIndex = 0; openPending = true; }
+    private List<ProjectImage> CurrentImages => activeProject?.Title switch
+    {
+        "People, in one place." => [
+            new("images/projects/hris/01-dashboard.png", "HRIS application dashboard screen"),
+            new("images/projects/hris/02-announcements.png", "HRIS application announcements screen"),
+            new("images/projects/hris/03-assets.png", "HRIS application assets screen")],
+        "Consistency, connected." => [
+            new("images/projects/master-data/01-login.gif", "Master Data application sign-in screen"),
+            new("images/projects/master-data/02-articles.gif", "Master Data application articles screen"),
+            new("images/projects/master-data/03-outlets.png", "Master Data application outlets screen")],
+        "Requests, in motion." => [
+            new("images/projects/request-monitoring/01-login.png", "Request Monitoring application sign-in screen"),
+            new("images/projects/request-monitoring/02-login-light.png", "Request Monitoring application sign-in light screen"),
+            new("images/projects/request-monitoring/03-user-guide.png", "Request Monitoring application user guide modal"),
+            new("images/projects/request-monitoring/04-dashboard.png", "Request Monitoring application dashboard screen"),
+            new("images/projects/request-monitoring/05-purchases.png", "Request Monitoring application purchase requests screen")],
+        "SetTra Mobile App" => [
+            new("images/projects/settra/02-update.png", "Settra invoices screen"),
+            new("images/projects/settra/03-settings.png", "Settra settings screen"),
+            new("images/projects/settra/04-invoices.png", "Settra invoices screen"),
+            new("images/projects/settra/05-details.png", "Settra details screen"),
+            new("images/projects/settra/06-remittance.png", "Settra remittance screen")],
+        "INVENTOPRO: PicknPack" => [
+            new("images/projects/inventopro-picknpack/01-login.png", "INVENTOPRO: PicknPack login screen"),
+            new("images/projects/inventopro-picknpack/02-invoices.png", "INVENTOPRO: PicknPack invoices screen"),
+            new("images/projects/inventopro-picknpack/03-details.png", "INVENTOPRO: PicknPack details screen"),
+            new("images/projects/inventopro-picknpack/04-barcode-scanner.png", "INVENTOPRO: PicknPack barcode scanner screen")],
+        "Gasta, made for mindful spending." => [
+            new("images/projects/gasta/01-onboarding.png", "Gasta expense tracker onboarding screen"),
+            new("images/projects/gasta/02-home.png", "Gasta expense tracker home screen"),
+            new("images/projects/gasta/03-settings.png", "Gasta expense tracker settings screen")],
+        _ => []
+    };
+    private void PreviousSlide() => slideIndex = (slideIndex - 1 + CurrentImages.Count) % CurrentImages.Count;
+    private void NextSlide() => slideIndex = (slideIndex + 1) % CurrentImages.Count;
+    private void ShowSlide(int index) => slideIndex = index;
+    private async Task CloseProject() => await JS.InvokeVoidAsync("portfolio.closeDialog", projectDialog);
+    private void DialogClosed() { activeProject = null; slideIndex = 0; openPending = false; }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) await JS.InvokeVoidAsync("portfolio.observeSections");
+        if (openPending) { openPending = false; await JS.InvokeVoidAsync("portfolio.showDialog", projectDialog); }
+    }
+    private sealed record ProjectImage(string Src, string Alt);
+}
+

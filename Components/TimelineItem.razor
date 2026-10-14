@@ -1,0 +1,2 @@
+<article class="timeline-item"><div class="timeline-date">@Period</div><div class="timeline-pin"><i></i></div><div class="timeline-body"><div class="timeline-title"><h3>@Role</h3><span>@Company</span></div><p>@Description</p><div class="tag-row">@foreach(var tag in Tags.Split(',')){<span>@tag</span>}</div></div></article>
+@code { [Parameter] public string Period {get;set;}=""; [Parameter] public string Role {get;set;}=""; [Parameter] public string Company {get;set;}=""; [Parameter] public string Description {get;set;}=""; [Parameter] public string Tags {get;set;}=""; }
