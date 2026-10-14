@@ -25,16 +25,16 @@ jobs:
         with:
           dotnet-version: 10.0.x
       - name: Restore dependencies
-        run: dotnet restore JochellePortfolio/JochellePortfolio.csproj
+        run: dotnet restore JochellePortfolio.csproj
       - name: Publish standalone WebAssembly site
-        run: dotnet publish JochellePortfolio/JochellePortfolio.csproj --configuration Release --no-restore
+        run: dotnet publish JochellePortfolio.csproj --configuration Release --no-restore
       - name: Prepare GitHub Pages artifact
         run: |
-          touch JochellePortfolio/bin/Release/net10.0/publish/wwwroot/.nojekyll
+          touch bin/Release/net10.0/publish/wwwroot/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: JochellePortfolio/bin/Release/net10.0/publish/wwwroot
+          path: bin/Release/net10.0/publish/wwwroot
 
   deploy:
     environment:
