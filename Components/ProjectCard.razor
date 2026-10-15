@@ -1,14 +1,59 @@
 <article class="project-card visual-@Visual">
-    <div class="project-visual"><div class="visual-topline"><span>@Type</span><span>@Number / 08</span></div>
-        @if (Visual == "hr") { <div class="mini-dashboard"><aside><b>sonic<span>.</span></b><i></i><i></i><i></i><i></i></aside><div class="dash-content"><small>PEOPLE OVERVIEW</small><strong>Good morning, team.</strong><div class="dash-stat-row"><div><span>EMPLOYEES</span><b>01</b></div><div><span>DIRECTORY</span><b>↗</b></div><div><span>RECORDS</span><b>•••</b></div></div><div class="dash-lines"><i></i><i></i><i></i></div></div></div><span class="visual-foot">HRIS / CENTRALIZED PEOPLE DATA</span> }
-        else if (Visual == "data") { <div class="data-flow"><span class="flow-node node-a">HRIS</span><span class="flow-node node-b">APP 01</span><span class="flow-node node-c">APP 02</span><div class="flow-hub">MDM<small>MASTER DATA</small></div><svg viewBox="0 0 400 200" aria-hidden="true"><path d="M70 55 C130 55 120 100 175 100 M70 150 C130 150 120 100 175 100 M225 100 C275 100 270 55 330 55 M225 100 C275 100 270 150 330 150" /></svg></div><span class="visual-foot">ONE SOURCE / MANY SYSTEMS</span> }
-        else if (Visual == "signal") { <div class="signal-ui"><div class="signal-label"><i></i> REQUEST MONITORING</div><div class="signal-title">Every request,<br /><em>in view.</em></div><div class="signal-bars">@for(var i=0;i<11;i++){<i></i>}</div><div class="signal-legend"><span>INTAKE</span><span>TRACK</span><span>RESOLVE</span></div></div><span class="visual-foot">REAL-TIME / WORKFLOW TRANSPARENCY</span> }
-        else if (Visual == "agro") { <div class="single-device"><div class="phone"><i></i><small>AGRO / INVENTORY</small><b>Farm<br />movement</b><span class="phone-metric">EGGS &nbsp; ↗</span><div class="phone-chart"></div><span class="phone-check">✓</span></div><span class="device-orbit">01 / MOBILE</span></div><span class="visual-foot">POULTRY INVENTORY / MOVEMENT TRACKING</span> }
-        else if (Visual == "settra") { <div class="single-device settra-device"><div class="phone"><i></i><small>SETTRA / SETTLEMENTS</small><b>Invoice<br />recorded</b><span class="phone-metric">SYNC STATUS &nbsp; •</span><div class="offline-chip">OFFLINE READY</div><span class="phone-check">✓</span></div><span class="device-orbit">02 / MOBILE</span></div><span class="visual-foot">INVOICE SETTLEMENTS / OFFLINE SYNC</span> }
-        else if (Visual == "pickpack") { <div class="single-device pickpack-device"><div class="phone"><i></i><small>INVENTOPRO / PICKNPACK</small><b>Order<br />verified</b><span class="phone-metric">BARCODE SCAN</span><div class="scan-frame"><i></i></div><span class="pack-box">▦</span></div><span class="device-orbit">03 / MOBILE</span></div><span class="visual-foot">BARCODE SCANNING / PICK ROUTES</span> }
-        else if (Visual == "gasta") { <div class="gasta-window"><div class="gasta-header"><b>gasta<span>.</span></b><small>MONTHLY VIEW</small></div><div class="gasta-balance"><small>THIS MONTH</small><b>Spend with<br />intention.</b><div class="gasta-dots"><i></i><i></i><i></i><i></i><i></i></div></div><div class="gasta-row"><i>◒</i><span>Everyday</span><b>↗</b></div><div class="gasta-row"><i>▧</i><span>On the go</span><b>↗</b></div></div><span class="visual-foot">A SMALL TOOL FOR BETTER HABITS</span> }
-        else { <div class="capstone-window"><div class="capstone-bar"><span>ACTIVITY / OVERVIEW</span><b>● REC</b></div><div class="capstone-head">Work activity <i>•••</i></div><div class="activity-row"><span>ACTIVE TIME</span><b>▰▰▰▰▱▱</b></div><div class="activity-row"><span>BACKGROUND APPS</span><b>◧ &nbsp; ◈ &nbsp; ▣</b></div><div class="activity-row"><span>CAPTURE LOG</span><b>▤ &nbsp; ▤ &nbsp; ▤</b></div><div class="capstone-foot">USER ACTIVITY &nbsp; / &nbsp; ANALYTICS</div></div><span class="visual-foot">CAPSTONE / ACTIVITY & ANALYTICS</span> }
-    </div>
-    <div class="project-info"><div class="project-copy"><span class="project-type">@Type</span><h3>@Title</h3><p class="project-description">@Description</p><button class="case-study-button" @onclick="() => OnOpen.InvokeAsync(this)">View project<span aria-hidden="true">↗</span></button></div>@if (!string.IsNullOrWhiteSpace(Link)){<a class="project-arrow" href="@Link" target="_blank" rel="noopener noreferrer" aria-label="Open @Title live app in a new tab">↗</a>}else{<span class="project-arrow" aria-hidden="true">↗</span>}<div class="tag-row">@foreach(var tag in Tags.Split(',')){<span>@tag</span>}</div></div>
+    <div class="project-visual">
+        <div class="visual-topline"><span>@Type</span><span>@Number / 08</span></div>
+        @if (Visual == "hr")
+        {
+            <div class="mini-dashboard"><aside><b>sonic<span>.</span></b><i></i><i></i><i></i><i></i></aside><div class="dash-content"><small>PEOPLE OVERVIEW</small><strong>Good morning, team.</strong><div class="dash-stat-row"><div><span>EMPLOYEES</span><b>01</b></div><div><span>DIRECTORY</span><b>↗</b></div><div><span>RECORDS</span><b>•••</b></div></div><div class="dash-lines"><i></i><i></i><i></i></div></div></div><span class="visual-foot">HRIS / CENTRALIZED PEOPLE DATA</span>
+        }
+        else if (Visual == "data")
+        {
+
+            <div class="data-flow"><span class="flow-node node-a">HRIS</span><span class="flow-node node-b">APP 01</span><span class="flow-node node-c">APP 02</span><div class="flow-hub">MDM<small>MASTER DATA</small></div><svg viewBox="0 0 400 200" aria-hidden="true"><path d="M70 55 C130 55 120 100 175 100 M70 150 C130 150 120 100 175 100 M225 100 C275 100 270 55 330 55 M225 100 C275 100 270 150 330 150" /></svg></div><span class="visual-foot">ONE SOURCE / MANY SYSTEMS</span>
+        }
+        else if (Visual == "signal")
+        {
+
+            <div class="signal-ui"><div class="signal-label"><i></i> REQUEST MONITORING</div><div class="signal-title">Every request,<br /><em>in view.</em></div><div class="signal-bars">@for(var i=0;i<11;i++){
+                <i></i>
+            }
+        </div><div class="signal-legend"><span>INTAKE</span><span>TRACK</span><span>RESOLVE</span></div></div><span class="visual-foot">REAL-TIME / WORKFLOW TRANSPARENCY</span>
+    }
+        else if (Visual == "agro")
+    {
+
+        <div class="single-device"><div class="phone"><i></i><small>AGRO / INVENTORY</small><b>Farm<br />movement</b><span class="phone-metric">EGGS &nbsp; ↗</span><div class="phone-chart"></div><span class="phone-check">✓</span></div><span class="device-orbit">01 / MOBILE</span></div><span class="visual-foot">POULTRY INVENTORY / MOVEMENT TRACKING</span>
+    }
+    else if (Visual == "settra")
+    {
+
+        <div class="single-device settra-device"><div class="phone"><i></i><small>SETTRA / SETTLEMENTS</small><b>Invoice<br />recorded</b><span class="phone-metric">SYNC STATUS &nbsp; •</span><div class="offline-chip">OFFLINE READY</div><span class="phone-check">✓</span></div><span class="device-orbit">02 / MOBILE</span></div><span class="visual-foot">INVOICE SETTLEMENTS / OFFLINE SYNC</span>
+    }
+    else if (Visual == "pickpack")
+    {
+
+        <div class="single-device pickpack-device"><div class="phone"><i></i><small>INVENTOPRO / PICKNPACK</small><b>Order<br />verified</b><span class="phone-metric">BARCODE SCAN</span><div class="scan-frame"><i></i></div><span class="pack-box">▦</span></div><span class="device-orbit">03 / MOBILE</span></div><span class="visual-foot">BARCODE SCANNING / PICK ROUTES</span>
+    }
+    else if (Visual == "gasta")
+    {
+
+        <div class="gasta-window"><div class="gasta-header"><b>gasta<span>.</span></b><small>MONTHLY VIEW</small></div><div class="gasta-balance"><small>THIS MONTH</small><b>Spend with<br />intention.</b><div class="gasta-dots"><i></i><i></i><i></i><i></i><i></i></div></div><div class="gasta-row"><i>◒</i><span>Everyday</span><b>↗</b></div><div class="gasta-row"><i>▧</i><span>On the go</span><b>↗</b></div></div><span class="visual-foot">A SMALL TOOL FOR BETTER HABITS</span>
+    }
+    else
+    {
+
+        <div class="capstone-window"><div class="capstone-bar"><span>ACTIVITY / OVERVIEW</span><b>● REC</b></div><div class="capstone-head">Work activity <i>•••</i></div><div class="activity-row"><span>ACTIVE TIME</span><b>▰▰▰▰▱▱</b></div><div class="activity-row"><span>BACKGROUND APPS</span><b>◧ &nbsp; ◈ &nbsp; ▣</b></div><div class="activity-row"><span>CAPTURE LOG</span><b>▤ &nbsp; ▤ &nbsp; ▤</b></div><div class="capstone-foot">USER ACTIVITY &nbsp; / &nbsp; ANALYTICS</div></div><span class="visual-foot">CAPSTONE / ACTIVITY & ANALYTICS</span>
+    }
+</div>
+<div class="project-info"><div class="project-copy"><span class="project-type">@Type</span><h3>@Title</h3><p class="project-description">@Description</p><button class="case-study-button" @onclick="() => OnOpen.InvokeAsync(this)">View project<span aria-hidden="true">↗</span></button></div>@if (!string.IsNullOrWhiteSpace(Link)){
+    <a class="project-arrow" href="@Link" target="_blank" rel="noopener noreferrer" aria-label="Open @Title live app in a new tab">↗</a>
+}else
+{
+
+    <span class="project-arrow" aria-hidden="true">↗</span>
+}
+<div class="tag-row">@foreach(var tag in Tags.Split(',')){
+    <span>@tag</span>
+}
+</div></div>
 </article>
 @code { [Parameter,EditorRequired] public string Number {get;set;} = ""; [Parameter,EditorRequired] public string Type {get;set;} = ""; [Parameter,EditorRequired] public string Title {get;set;} = ""; [Parameter,EditorRequired] public string Description {get;set;} = ""; [Parameter,EditorRequired] public string Visual {get;set;} = ""; [Parameter,EditorRequired] public string Tags {get;set;} = ""; [Parameter] public string? Link {get;set;} [Parameter] public EventCallback<ProjectCard> OnOpen { get; set; } }

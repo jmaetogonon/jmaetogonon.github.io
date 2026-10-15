@@ -25,3 +25,47 @@
 .project-copy{min-width:0}.project-description{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.case-study-button{margin-top:11px;padding:0;border:0;background:none;color:#5e7c49;font:600 10px var(--sans);cursor:pointer}.case-study-button span{display:inline-block;margin-left:6px;transition:transform .2s}.case-study-button:hover span{transform:translate(3px,-2px)}
 .project-dialog{border:1px solid #d9ddd3;padding:0;width:min(920px,calc(100vw - 32px));max-height:min(88vh,760px);background:#f8f7f2;color:var(--ink);box-shadow:0 28px 100px #17231b55}.project-dialog::backdrop{background:#18231dcc;backdrop-filter:blur(4px)}.dialog-shell{padding:clamp(18px,3vw,32px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.dialog-close{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:24px;cursor:pointer}.dialog-close:hover{background:#e9ece4}.dialog-content{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(22px,4vw,42px);align-items:center}.dialog-visual{min-height:340px;position:relative;display:grid;place-items:center;background:#e9ebe4;overflow:hidden}.dialog-visual img{display:block;max-width:100%;max-height:60vh;object-fit:contain}.gallery-placeholder{padding:35px;text-align:center;color:#677365}.placeholder-mark{display:block;font:46px var(--mono);color:#8ca671}.gallery-placeholder b{font-size:14px}.gallery-placeholder p{font-size:11px;line-height:1.6}.dialog-copy h2{font-size:clamp(27px,4vw,42px);letter-spacing:-.055em;line-height:1.05;margin:12px 0}.dialog-copy>p{font-size:13px;line-height:1.8;color:#6c736b}.dialog-copy .tag-row{margin:18px 0}.dialog-live-link{margin-top:4px}.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:#f8f7f2eF;cursor:pointer;font-size:20px}.carousel-arrow:hover{background:#fff}.carousel-arrow.previous{left:12px}.carousel-arrow.next{right:12px}.carousel-count{position:absolute;right:12px;bottom:12px;padding:6px 9px;background:#202a25;color:white;font:9px var(--mono)}.carousel-dots{display:flex;gap:8px;margin-top:20px}.carousel-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#c8cec1;cursor:pointer}.carousel-dots button.selected{background:#6f8b54;box-shadow:0 0 0 3px #6f8b5430}
 @media(max-width:600px){.capstone-window{left:7%;right:7%;top:48px;bottom:39px;padding:13px 12px}.capstone-head{font-size:17px}.activity-row{font-size:7px;padding:8px 0}.visual-foot{bottom:10px;font-size:7px}.single-device{inset:44px 8% 39px}.project-dialog{max-height:92vh}.dialog-content{grid-template-columns:1fr;gap:20px}.dialog-visual{min-height:250px;max-height:42vh}.dialog-visual img{max-height:42vh}.dialog-copy h2{font-size:29px}.dialog-copy>p{font-size:12px}.dialog-shell{padding:16px}}
+
+/* Case-study dialog: editorial narrative, scannable delivery notes, readable on every viewport. */
+.project-dialog{width:min(1040px,calc(100vw - 32px));max-height:90vh;overflow-y:auto;overscroll-behavior:contain}
+.dialog-content{align-items:start}
+.dialog-visual{position:sticky;top:0;min-height:320px}
+.dialog-visual img{max-height:52vh}
+.dialog-copy{padding:2px 4px 12px 0}
+.dialog-copy .dialog-lead{font-size:14px;line-height:1.8;color:#515c52;margin:13px 0 22px}
+.detail-breakdown h3,.detail-stack h3{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#788473;margin:0 0 10px}
+.detail-points{display:grid;gap:8px}
+.detail-points article{padding:12px 14px;background:#f0f1eb;border-left:2px solid #9bb681}
+.detail-points h4{margin:0 0 5px;font-size:11px;letter-spacing:-.01em}
+.detail-points p{margin:0;font-size:10px;line-height:1.65;color:#6b736a}
+.detail-stack{margin-top:20px}
+.dialog-copy .detail-stack .tag-row{margin:0;gap:6px}
+.dialog-copy .tag-row span{font-size:8px}
+.dialog-live-link{margin-top:18px}
+@media(max-width:800px){.dialog-content{grid-template-columns:1fr}.dialog-visual{position:relative;top:auto;min-height:280px;max-height:38vh}.dialog-visual img{max-height:38vh}.dialog-copy{padding:0}.project-dialog{max-height:92vh}.dialog-shell{padding:18px}}
+@media(max-width:600px){.dialog-visual{min-height:220px;max-height:32vh}.dialog-visual img{max-height:32vh}.dialog-copy .dialog-lead{font-size:12px;margin:10px 0 18px}.detail-points article{padding:10px 11px}.dialog-top{margin-bottom:14px}}
+
+/* A brief coffee-and-code welcome while the Blazor WebAssembly app starts. */
+.boot-screen{min-height:100vh;min-height:100svh;display:grid;align-content:center;justify-items:center;gap:0;position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 45%,#fffdf8 0,#f4f2ed 52%,#ebece4 100%);color:var(--ink);animation:boot-enter .45s ease-out both}
+.boot-screen:before,.boot-screen:after{content:"";position:absolute;width:330px;height:330px;border:1px solid #dfe3d7;border-radius:50%;z-index:-1;opacity:.65}
+.boot-screen:before{transform:scaleX(1.45) rotate(-28deg)}.boot-screen:after{width:245px;height:390px;transform:rotate(35deg);opacity:.45}
+.boot-cup-wrap{width:146px;height:132px;display:grid;place-items:center;position:relative;margin-bottom:14px}
+.boot-cup{width:124px;height:116px;overflow:visible;z-index:1}
+.cup-steam{fill:none;stroke:#91a97b;stroke-width:2.2;stroke-linecap:round;opacity:0;animation:steam-rise 2.4s ease-in-out infinite}
+.steam-two{animation-delay:.45s}.steam-three{animation-delay:.9s}
+.cup-body{fill:#fbfaf5;stroke:#34443a;stroke-width:2.4;stroke-linejoin:round}
+.cup-handle,.cup-saucer{fill:none;stroke:#34443a;stroke-width:2.4;stroke-linecap:round}
+.cup-mark{font:500 15px var(--mono);fill:#6f8d53;text-anchor:middle;letter-spacing:-2px}
+.cup-glow{position:absolute;width:94px;height:20px;left:24px;bottom:9px;border-radius:50%;background:#a9c8893b;filter:blur(11px);z-index:0}
+.boot-kicker{margin:0;color:#788173;font:9px var(--mono);letter-spacing:.14em;text-align:center}
+.boot-kicker span{color:#91a97b;padding:0 4px}
+.boot-message{margin:13px 0 21px;color:#303a33;font-size:14px;font-weight:500;letter-spacing:-.02em}
+.boot-ellipsis{display:inline-block;overflow:hidden;vertical-align:bottom;width:0;animation:ellipsis 1.2s steps(4,end) infinite}
+.boot-progress{height:2px;width:136px;background:#dfe3d9;overflow:hidden;border-radius:2px}
+.boot-progress span{display:block;width:38%;height:100%;background:#7f9f62;border-radius:2px;animation:progress-sweep 1.5s ease-in-out infinite}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes steam-rise{0%{opacity:0;transform:translateY(5px)}35%{opacity:.8}100%{opacity:0;transform:translateY(-8px)}}
+@keyframes progress-sweep{0%{transform:translateX(-110%)}100%{transform:translateX(360%)}}
+@keyframes ellipsis{0%{width:0}100%{width:1.3em}}
+@keyframes boot-enter{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.boot-screen,.cup-steam,.boot-progress span,.boot-ellipsis{animation:none!important}.boot-screen{opacity:1}.cup-steam{opacity:.45;transform:none}.boot-progress span{width:48%;transform:translateX(55%)}}

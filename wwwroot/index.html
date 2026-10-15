@@ -22,7 +22,26 @@
 </head>
 <body>
     <a class="skip-link" href="#top">Skip to content</a>
-    <div id="app"><div class="boot-screen" aria-label="Loading portfolio"><span class="boot-mark">JM</span><span>Loading a few things…</span></div></div>
+    <div id="app">
+        <div class="boot-screen" role="status" aria-live="polite">
+            <div class="boot-cup-wrap" aria-hidden="true">
+                <svg class="boot-cup" viewBox="0 0 120 112" focusable="false">
+                    <path class="cup-steam steam-one" d="M42 34c-8-8 7-10 0-19" />
+                    <path class="cup-steam steam-two" d="M61 31c-8-8 7-10 0-19" />
+                    <path class="cup-steam steam-three" d="M80 34c-8-8 7-10 0-19" />
+                    <path class="cup-body" d="M25 43h58l-6 43a8 8 0 0 1-8 7H39a8 8 0 0 1-8-7z" />
+                    <path class="cup-handle" d="M81 51h8a12 12 0 0 1 0 24h-10" />
+                    <path class="cup-saucer" d="M28 99h57" />
+                    <text class="cup-mark" x="54" y="71">{;}</text>
+                </svg>
+                <span class="cup-glow"></span>
+            </div>
+            <p class="boot-kicker">JOCHELLE MABASA <span>·</span> DEVELOPER PORTFOLIO</p>
+            <p class="boot-message">Brewing the workspace<span class="boot-ellipsis" aria-hidden="true">...</span></p>
+            <div class="boot-progress" aria-hidden="true"><span></span></div>
+            <span class="visually-hidden">Loading the portfolio</span>
+        </div>
+    </div>
     <div id="blazor-error-ui" role="alert">Something went wrong. <a href="." class="reload">Reload the page</a><button class="dismiss" aria-label="Dismiss">×</button></div>
     <script src="js/portfolio.js"></script>
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
